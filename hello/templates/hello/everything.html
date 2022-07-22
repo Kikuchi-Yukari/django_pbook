@@ -1,0 +1,17 @@
+{% extends 'hello/layout.html' %}
+
+{% block title %}何でも{% endblock %}
+
+{% block header %}
+<h1 class="display-4 text-primary">なんでもずかん</h1>
+{% endblock %}
+
+{% block content %}
+    <section id="home" class="big-bg">
+        <nav>
+            <ul class="main-nav">
+                <li><a href="create">ずかんをついかする</a></li>
+            </ul>
+        </nav>
+    </section>  
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'hello/layout.html' %}
+
+{% block title %}むし{% endblock %}
+
+{% block header %}
+<h1 class="display-4 text-primary">むしずかん</h1>
+{% endblock %}
+
+{% block content %}
+    <h1 class="display-4 text-primary">
+        むしずかん</h1>
+    <table class="table">
+        <tr>
+            <th>ID</th>
+            <th>めいしょう</th>
+            <th>ずかんのしゅるい</th>
+            <th>とったひ</th>
+            <th>こめんと</th>
+            <th>しゃしん</th>
+        </tr>
+    {% for item in object_list %}
+        <tr>
+            <th>{{item.id}}</th>
+            <td>{{item.item}}</td>
+            <td>{{item.category}}</td>
+            <th>{{item.collection_date}}</th>
+            <td>{{item.comment}}</td>
+            <td>{{item.pbook_image}}</td>            
+        <tr>
+    {% endfor %}
+    </table>
+    <section id="home" class="big-bg">
+        <nav>
+            <ul class="main-nav">
+                <li><a href="create">ずかんをついかする</a></li>
+            </ul>
+        </nav>
+    </section>  
+{% endblock %}

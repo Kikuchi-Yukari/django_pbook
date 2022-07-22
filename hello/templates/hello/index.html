@@ -1,0 +1,29 @@
+{% extends 'hello/layout.html' %}
+
+{% block title %}TOPページ{% endblock %}
+
+{% block header %}
+<h1 class="display-4 text-primary">じぶんずかん</h1>
+{% endblock %}
+
+{% block content %}
+    <section id="home" class="big-bg">
+        <nav>
+            <ul class="main-nav">
+                <p>じぶんだけのずかんをつくろう</p>
+            </ul>
+        </nav>
+    </section>  
+    <h1 class="display-4 text-primary">
+        {{title}}</h1>
+    <table class="table">
+        <tr>
+            <th>data</th>
+        </tr>
+    {% for item in data %}
+        <tr>
+            <td>{{item}}</td>
+        <tr>
+    {% endfor %}
+    </table>
+{% endblock %}
